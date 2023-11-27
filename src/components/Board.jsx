@@ -47,12 +47,15 @@ export function Board() {
         </div>
       )}
 
-      <p className='text-center p-2.5 text-xl pb-8'>Zostało {tasks} zadań</p>
+      <p className='text-center p-2.5 text-xl pb-8'>Zostało zadań: {tasks}</p>
 
       {taskArray.map((task, key) => (
         <Task
           key={key}
           newTask={task}
+          setTaskArray={setTaskArray}
+          taskArray={taskArray}
+          setTasks={setTasks}
         />
       ))}
     </div>
